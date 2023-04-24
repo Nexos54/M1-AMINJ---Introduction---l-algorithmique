@@ -26,6 +26,8 @@
     //------------------------------------- INPUT
     //TEMP : pour récupérer le contenu d'un champ de type input
 
+
+    // recuperation des valeurs des 2 inputs
     let firstWordInputValue = firstWordInput.value;
     let secondWordInputValue = secondWordInput.value;
     
@@ -33,21 +35,25 @@
     let firstWordSearch = mots.filter(mot => mot.includes(firstWordInputValue));
     let secondWordSearch = mots.filter(mot => mot.includes(secondWordInputValue));
 
-    let conditionLength = [4,5,6];
+    // creation d'un array qui va stocker toutes les valeurs filter du tableau mots
     let aleatoireArray = [];
  
+    // recherche des mots de taille 4, choisis de maniere random apres et qui est stocker dans l'array aleatoireArray
     const arrayLength4 = mots.filter(element => element.length === 4);
     const arrayLength4Random = arrayLength4.sort(() => Math.random() - 0.5);
     aleatoireArray.push(...arrayLength4Random.slice(0, 2));
 
+    // recherche des mots de taille 5, choisis de maniere random apres et qui est stocker dans l'array aleatoireArray
     const arrayLength5 = mots.filter(element => element.length === 5);
     const arrayLength5Random = arrayLength5.sort(() => Math.random() - 0.5);
     aleatoireArray.push(...arrayLength5Random.slice(0, 6));
 
+    // recherche des mots de taille 6, choisis de maniere random apres et qui est stocker dans l'array aleatoireArray
     const arrayLength6 = mots.filter(element => element.length === 6);
     const arrayLength6Random = arrayLength6.sort(() => Math.random() - 0.5);
     aleatoireArray.push(...arrayLength6Random.slice(0, 2));
 
+    // actualisation de l'array mots sans les mots choisis
     mots = mots.filter(element => !aleatoireArray.includes(element));
 
 
