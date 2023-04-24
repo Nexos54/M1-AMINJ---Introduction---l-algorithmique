@@ -4,8 +4,8 @@
   const p_conclusion = document.getElementById("conclusion");
   const p_complement = document.getElementById("complement");
   
-  const inp_fragment_1 = document.getElementById("fragment_1");
-  const inp_fragment_2 = document.getElementById("fragment_2");
+  let firstWordInput = document.getElementById("firstWordInput");
+  let secondWordInput = document.getElementById("secondWordInput");
 
   //------------------------------------- PARAGRAPHE
   //TEMP : pour modifier le contenu d'un paragraphe on utilise innerHTML sur l'objet concerné
@@ -25,16 +25,31 @@
 
     //------------------------------------- INPUT
     //TEMP : pour récupérer le contenu d'un champ de type input
-    let fragment_1 = inp_fragment_1.value;
-    console.log(fragment_1);		//affichage au niveau de la console
-    let fragment_2 = inp_fragment_2.value;
-    console.log(fragment_2);
 
-    //TEMP : pour vider un champ
-    inp_fragment_1.value = '';
-    //TEMP : pour changer le contenu d'un champ
-    inp_fragment_1.value = 'VAL';
-    inp_fragment_2.value = 'ISE';
+    let firstWordInputValue = firstWordInput.value;
+    let secondWordInputValue = secondWordInput.value;
+    
+
+    let firstWordSearch = mots.filter(mot => mot.includes(firstWordInputValue));
+    let secondWordSearch = mots.filter(mot => mot.includes(secondWordInputValue));
+
+    let conditionLength = [4,5,6];
+    let aleatoireArray = [];
+ 
+    const arrayLength4 = mots.filter(element => element.length === 4);
+    const arrayLength4Random = arrayLength4.sort(() => Math.random() - 0.5);
+    aleatoireArray.push(...arrayLength4Random.slice(0, 2));
+
+    const arrayLength5 = mots.filter(element => element.length === 5);
+    const arrayLength5Random = arrayLength5.sort(() => Math.random() - 0.5);
+    aleatoireArray.push(...arrayLength5Random.slice(0, 6));
+
+    const arrayLength6 = mots.filter(element => element.length === 6);
+    const arrayLength6Random = arrayLength6.sort(() => Math.random() - 0.5);
+    aleatoireArray.push(...arrayLength6Random.slice(0, 2));
+
+    mots = mots.filter(element => !aleatoireArray.includes(element));
+
 
 
     //TEMP : change le contenu d'un paragraphe
