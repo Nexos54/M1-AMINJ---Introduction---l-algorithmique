@@ -1,0 +1,8 @@
+/**
+ Vous devez importer ce fichier via la balise script dans votre fichier programme :
+ <script src="liste_mots.js" defer><script>
+ 
+ AUCUNE MODIFICATION DE CE FICHIER PERMISE
+ Vous ne devez pas modifier ce fichier et les mots que vous utiliserez proviendront du tableau "mots" ci-dessous.
+*/
+let mots=['acte','apte','avis','arme','banc','jupe','epee','edit','daim','reel','judo','joli','joie','juin','mars','fort','soja','puit','flux','faux','vrai','gens','chef','glue','gite','fils','kart','hier','juge','golf','bref','clef','cafe','faim','oeuf','maux','mage','meme','amer','gain','etre','jaser','avoir','jeter','faire','alpin','fixer','vivre','boire','boite','laver','balle','jambe','myope','salle','malle','lever','choix','choux','biper','aider','aimer','aerer','ajout','chaud','achat','abdos','arbre','appat','appel','apres','karma','mieux','apero','aller','mixte','album','alibi','alpha','epice','moyen','epais','juger','tache','dorer','ecole','livre','juste','homme','femme','match','envoi','enjeu','vague','ferme','vache','cygne','carte','glace','valse','calme','force','accord','adorer','adroit','absent','accent','bagage','barque','bonbon','bouton','boxeur','caisse','canyon','caviar','castor','croire','devoir','douane','doudou','druide','disque','ouvrir','fermer','flotte','manger','chaque','binome','maxime','mellon','montre','ecoute','entier','amuser','editer','elever','empire','mousse','nuance','nageur','proche','excuse','expert','flocon','examen','valise','joyeux','goyave','exiger','voyage','jusque','tresor','quiche','quinze','lacher','coller','copier','couper','pigeon']
